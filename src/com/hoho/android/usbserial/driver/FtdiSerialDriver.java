@@ -281,7 +281,8 @@ public class FtdiSerialDriver extends CommonUsbSerialDriver {
                         readAmt, timeoutMillis);
 
                 if (totalBytesRead < MODEM_STATUS_HEADER_LENGTH) {
-                    throw new IOException("Expected at least " + MODEM_STATUS_HEADER_LENGTH + " bytes");
+                  //  throw new IOException("Expected at least " + MODEM_STATUS_HEADER_LENGTH + " bytes");
+                    return 0;
                 }
   
                 return filterStatusBytes(mReadBuffer, dest, totalBytesRead, endpoint.getMaxPacketSize());
