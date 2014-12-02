@@ -15,7 +15,7 @@
      <!-- 0x1B4F / 0x9204 Sparkfun pro micro -->
     <usb-device vendor-id="6991" product-id="37380" />
 
-    <!-- 0x0416 / 0x511B Nuvoton NuTiny -->
+    <!-- 0x0416 / 0x511B Nuvoton NuTiny-- not tested yet  -->
     <usb-device vendor-id="1046" product-id="20763" />
     
 </resources>
