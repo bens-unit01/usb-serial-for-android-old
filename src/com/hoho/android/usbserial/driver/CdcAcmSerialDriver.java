@@ -255,6 +255,10 @@ public class CdcAcmSerialDriver extends CommonUsbSerialDriver {
                 new int[] {
                     UsbId.SPARKFUN_PRO_MICRO,
                 });
+        supportedDevices.put(Integer.valueOf(UsbId.VENDOR_NUVOTON),
+                new int[] {
+                    UsbId.NUVOTON_NUTINY,
+                });
         return supportedDevices;
     }
 
