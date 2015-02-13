@@ -282,6 +282,7 @@ public class FtdiSerialDriver extends CommonUsbSerialDriver {
 
                 if (totalBytesRead < MODEM_STATUS_HEADER_LENGTH) {
                   //  throw new IOException("Expected at least " + MODEM_STATUS_HEADER_LENGTH + " bytes");
+                    Log.e(TAG, " io error ... when reading "); 
                     return 0;
                 }
   
@@ -316,8 +317,10 @@ public class FtdiSerialDriver extends CommonUsbSerialDriver {
             }
 
             if (amtWritten <= 0) {
-                throw new IOException("Error writing " + writeLength
-                        + " bytes at offset " + offset + " length=" + src.length);
+               // throw new IOException("Error writing " + writeLength
+                //        + " bytes at offset " + offset + " length=" + src.length);
+                Log.e(TAG, " io error ... when writing ");
+                return 0;
             }
 
             Log.d(TAG, "Wrote amtWritten=" + amtWritten + " attempted=" + writeLength);
